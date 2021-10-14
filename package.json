@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "webpack-dev-server --hot",
+    "build" :"webpack",
     "server": "nodemon server.js"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "dotenv": "^10.0.0",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
@@ -17,12 +17,12 @@
     "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.4.0",
-    "gulp": "^4.0.2",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
     "nodemon": "^2.0.13",

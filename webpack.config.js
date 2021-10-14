@@ -45,7 +45,7 @@ module.exports ={
     ],
     devServer: {
         port : 3000,
-    
+        historyApiFallback : true // 존재하지 않는 HTTP 요청에 대해 404를 응답하지 않고 index.html 로 리디렉션
         // proxy : {
         //     '/admin' : 'localhost:5000'
         // }
