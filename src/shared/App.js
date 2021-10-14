@@ -1,15 +1,29 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
+import { Route , Switch } from 'react-router-dom';
+import {Home, About, Post} from '../pages';
+import MenuBar from "../components/MenuBar";
+
 
 class App extends Component {
-    state = {
-        text : '관리자님! 어서오세요~! 반갑습니다',
-    };
-    render(){
+
+    render() {
         return (
-            <>
-                <h1>{this.state.text}</h1>
-            </>
-        )
+            <div>
+                <MenuBar/>
+                <Route exact path={`/`} component={Home}/>
+
+                {/*
+                    먼저 비교 할 라우트를 위에 작성하셔야 한다
+                    만약에 /about 을 /about/:name 보다 위에 넣어준다면, name 을 입력해주어도 나타나지 않는다..
+                */}
+                <Switch>
+                    <Route path={`/about/:name`} component={About}/>
+                    <Route path={`/about`} component={About}/>
+                </Switch>
+                <Route path={`/post`} component={Post}/>
+            </div>
+        );
     }
 }
+
 export default App;

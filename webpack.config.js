@@ -45,6 +45,7 @@ module.exports ={
     ],
     devServer: {
         port : 3000,
+    
         // proxy : {
         //     '/admin' : 'localhost:5000'
         // }
